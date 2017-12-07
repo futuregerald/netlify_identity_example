@@ -93,7 +93,6 @@
                 const d = Date.now()
                 if (d > exp){
                 console.log("Your identity session has expired")
-                document.getElementById("error-text").innerHTML= "Right now sessions are good for an hour, and yours has expired ¯\_(ツ)_/¯. Please login again"
                 netlifyIdentity.logout();
                 netlifyIdentity.open();
                 } else {
@@ -101,6 +100,7 @@
                 }
             }
             if (window.netlifyIdentity) {
+                console.log(user)
     // Check if the JWT token is expired, if so log out the user          
                 netlifyIdentity.on("login", user => {
                 console.log(user)
