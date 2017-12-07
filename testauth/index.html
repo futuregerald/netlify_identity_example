@@ -65,8 +65,8 @@
             </ul>
 
 
-            <h1 class='bannerText1'> I'M
-                <strong onClick={this.handleLogIn} class="bannerText1strong">GERALD</strong>
+            <h1 class='bannerText1'> Netlify
+                <strong onClick={this.handleLogIn} class="bannerText1strong">IDENTITY</strong>
             </h1>
             <h4></h4>
 
@@ -77,7 +77,9 @@
             <div class="row">
                 <div class="col s12">
                 <div class="card-panel grey lighten-5 black-text ">
-                    <span>It looks like you've successfully logged in, and you're also an admin!(or you wouldn't be on this page)</span>
+                    <span>It looks like you've successfully logged in, and you're also an admin!(or you wouldn't be on this page). 
+                        Open your javascript console and take a look at the <code>user</code> object. 
+                        It's made avaible because of the netlify-identity-widget via gotrue-js</span>
                 </div>
                 </div>
             </div>
@@ -89,9 +91,6 @@
         <script>// Bind to events
         if (window.netlifyIdentity){
             netlifyIdentity.on("init", user => console.log(user));
-            netlifyIdentity.on("login", user => console.log(user));
-            netlifyIdentity.on("logout", () => console.log("Logged out"));
-            netlifyIdentity.on("error", err => console.error("Logged out"));
             netlifyIdentity.on("open", () => console.log("Widget opened"));
             netlifyIdentity.on("close", () => console.log("Widget closed"));
         }

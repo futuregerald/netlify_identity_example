@@ -65,8 +65,8 @@
             </ul>
 
 
-            <h1 class='bannerText1'> I'M
-                <strong onClick={this.handleLogIn} class="bannerText1strong">GERALD</strong>
+            <h1 class='bannerText1'> Netlify
+                <strong onClick={this.handleLogIn} class="bannerText1strong">IDENTITY</strong>
             </h1>
             <h4></h4>
 
@@ -100,7 +100,6 @@
                 }
             }
             if (window.netlifyIdentity) {
-                console.log(user)
     // Check if the JWT token is expired, if so log out the user          
                 netlifyIdentity.on("login", user => {
                 console.log(user)
