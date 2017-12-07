@@ -1,0 +1,2 @@
+/testauth/* 200! Role=admin
+/testauth/ /testlogin 302

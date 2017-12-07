@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script defer type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <title>FutureGerald</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+    <div class="App">
+        <div class="navDiv">
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper blue darken-3">
+                        <a href="/" class="brand-logo">
+                            
+                        </a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="/testauth/">Test Auth</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/testlogin/">Login</a>
+                            </li>
+                            <li>
+                                <a href="/admin/">NetlifyCMS</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+            <ul class="side-nav" id="mobile-demo">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.futuregerald.com/blog">Blog</a>
+                </li>
+                <li>
+                    <a href="/links">My Links</a>
+                </li>
+                <li>
+                    <a href="/mywork">My Work</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact Me</a>
+                </li>
+                <li onClick={this.openIdentityWidget}>
+                    <a>Login</a>
+                </li>
+            </ul>
+
+
+            <h1 class='bannerText1'> I'M
+                <strong onClick={this.handleLogIn} class="bannerText1strong">GERALD</strong>
+            </h1>
+            <h4></h4>
+
+        </div>
+        <br></br>
+        <div class="container shiftUp">
+            <div class="row">
+                <div class="col s12">
+                <div class="card-panel grey lighten-5 black-text ">
+                    <span>
+                        I’m
+                        <strong>Gerald</strong>. An entrepreneur, web developer, project manager, one-time blogger, IT professional
+                        and support engineer, part-time photographer and videographer, full-time family man. This is my corner
+                        of the internet where I post my ravings and share my work. If you want to get to know more about
+                        what I’m about, then you found the right place. If you want to work with me, or hire me, then please
+                        click the contact me link in the main menu. Welcome to my story.
+                    </span>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m3">
+
+
+                <div class="card tallerCards fixedCards hide-on-med-and-down">
+                    <div class="card-image tallerCards">
+                        <img src="img/incodewetrustBurnt.png" alt="In code we trust" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+                <div class="card tallerCards  hide-on-large-only">
+                    <div class="card-image tallerCards">
+                        <img src="img/incodewetrustBurnt.png" alt="In code we trust" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <div class="col s12 m9">
+                <div class="card-panel tallerCards grey lighten-5 black-text text-darken-4">
+                    <span>
+                        I’m a
+                        <strong>Developer</strong>. Web development is my passion and professional focus. I work in HTML5, CSS, and
+                        Javascript. I’m familiar with jquery, and several other libraries. For front-end development I am
+                        most experienced with React + Redux. I have experience working with RESTful API’s, and have created
+                        basic API’s using Express.js, Mongoose over MongoDB, and Node.js. I am also currently learning React
+                        Native for making mobile apps on both iOS and Android.
+                    </span>
+                </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m3">
+
+
+                <div class="card tallerCards fixedCards hide-on-med-and-down">
+                    <div class="card-image">
+                        <img src="img/networkBurnt.png" alt="IT Professional" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+                <div class="card tallerCards hide-on-large-only">
+                    <div class="card-image">
+                        <img src="img/networkBurnt.png" alt="IT Professional" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <div class="col s12 m9">
+                <div class="card-panel tallerCards grey lighten-5 black-text text-darken-4">
+                    <span>
+                        I’ve worked for 10+ years as an
+                        <strong>IT Professional</strong>. I currently also work as a support engineer at a VoIP company providing
+                        trouble ticket and e-mail based technical support to a large user base of residential and business
+                        users. My job entails supporting people that use third party software and hardware that connect to
+                        our service, testing new hardware and software, and writing guides and support documentation.
+                    </span>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m3">
+
+
+                <div class="card tallerCards fixedCards hide-on-med-and-down">
+                    <div class="card-image">
+                        <img src="img/photographySq.png" alt="Photography" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+                <div class="card tallerCards hide-on-large-only">
+                    <div class="card-image">
+                        <img src="img/photographySq.png" alt="Photography" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <div class="col s12 m9">
+                <div class="card-panel tallerCards grey lighten-5 black-text text-darken-4">
+                    <span>
+                        Photography is that thing I do that doesn’t make me any money, but I just can’t stop investing in to it. Luckily, I’ve found
+                        ways to integrate
+                        <strong>photography</strong> and
+                        <strong>videography</strong> in to my professional life. I prefer to shoot people because I enjoy telling
+                        stories through pictures, and the memories these pictures and videos bring out. I’ve also shot interviews,
+                        venues, and events for businesses, friends and family.
+                    </span>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m3">
+
+
+                <div class="card tallerCards fixedCards hide-on-med-and-down">
+                    <div class="card-image">
+                        <img src="img/geekBurnt.png" alt="Geek" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+                <div class="card tallerCards hide-on-large-only">
+                    <div class="card-image">
+                        <img src="img/geekBurnt.png" alt="Geek" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <div class="col s12 m9">
+                <div class=" card-panel tallerCards grey lighten-5 black-text text-darken-4">
+                    <span>
+                        While I am an Eagle Scout and enjoy being out in the woods, I’m also a
+                        <strong>tech entrepreneur</strong>. I’ve been part of a couple of startups and like many, I’m hoping one
+                        of them sticks. I love nerdy things like comics and gadget. I read sci-fi and fantasy books, as well
+                        as biographies and startup stories. I worked at a now defunct technology blog where I was an
+                        <strong>editor</strong> and covered mobile phones and devices. No matter what I do professionally, it will
+                        always be about
+                        <strong>connecting people and technology</strong>.
+                    </span>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m3">
+
+
+                <div class="card tallerCards fixedCards hide-on-med-and-down">
+                    <div class="card-image">
+                        <img src="img/family2.png" alt="Geek" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+                <div class="card tallerCards hide-on-large-only">
+                    <div class="card-image">
+                        <img src="img/family2.png" alt="Family man" />
+                        <span class="card-title"></span>
+                    </div>
+
+                </div>
+
+                </div>
+
+                <div class="col s12 m9">
+                <div class=" card-panel tallerCards grey lighten-5 black-text text-darken-4">
+                    <span>
+                        Above all else, I’m a
+                        <strong>family man</strong>. I have an amazing wife, a little boy, and an almost teen-age girl. My world
+                        revolves around them, and they drive me to succeed. Family trips and vacations are some of the best
+                        times I’ve ever had, and I make sure to give my kids experiences that will help them to grow in to
+                        amazing people.
+                    </span>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <Footer copyrights="&copy; 2017 FutureGerald" class='blue darken-3'>
+
+        </Footer>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+        })
+    </script>
+
+</body>
+
+</html>

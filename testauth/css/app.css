@@ -1,0 +1,53 @@
+body {
+  font-family: 'Roboto', sans-serif !important;
+  background-color: #5E95D2;
+}
+
+span strong {
+  color: #FF7808;
+}
+.navDiv {
+  height: 30em !important;
+  background-image: url('me_banner8bitBW2.png');
+  background-size:     cover;                      
+  background-repeat:   no-repeat;
+  background-position: center center;        
+}
+
+.navBack {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logoClass {
+  width: 300px;
+  height: auto;
+}
+
+.bannerText1 {
+  color: #E3F2FD;
+  font-family: 'Roboto', sans-serif !important;
+  text-align: center;
+  line-height: 5em;
+}
+.bannerText1strong{
+  color: #FF7808;
+}
+
+.tallerCards {
+  min-height: 13em !important;
+  min-width: 13em !important;
+}
+
+.fixedCards {
+  max-height: 13em !important;
+  max-width: 13em !important
+}
+
+.shiftUp {
+  position: relative;
+  top: -7em !important;
+}
+
+.whiteBackground {
+  background-color: white;
+}

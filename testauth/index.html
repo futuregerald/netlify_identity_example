@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script defer type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+    
+    <title>FutureGerald</title>
+</head>
+<body>
+        
+    <div id="root"></div>
+    <div class="App">
+        <div class="navDiv">
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper blue darken-3">
+                        <a href="/" class="brand-logo">
+                            
+                        </a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="/testauth/">Test Auth</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/testlogin/">Login</a>
+                            </li>
+                            <li>
+                                    <a href="/admin/">NetlifyCMS</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+            <ul class="side-nav" id="mobile-demo">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="https://www.futuregerald.com/blog">Blog</a>
+                </li>
+                <li>
+                    <a href="/links">My Links</a>
+                </li>
+                <li>
+                    <a href="/mywork">My Work</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact Me</a>
+                </li>
+                <li onClick={this.openIdentityWidget}>
+                    <a href="/testlogin">Login</a>
+                </li>
+            </ul>
+
+
+            <h1 class='bannerText1'> I'M
+                <strong onClick={this.handleLogIn} class="bannerText1strong">GERALD</strong>
+            </h1>
+            <h4></h4>
+
+        </div>
+        <br></br>
+       
+        <div class="container shiftUp">
+            <div class="row">
+                <div class="col s12">
+                <div class="card-panel grey lighten-5 black-text ">
+                    <span>It looks like you've successfully logged in, and you're also an admin!(or you wouldn't be on this page)</span>
+                </div>
+                </div>
+            </div>
+           
+    </div>
+    
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ -    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+        <script>// Bind to events
+            netlifyIdentity.on("init", user => console.log(user));
+            netlifyIdentity.on("login", user => console.log(user));
+            netlifyIdentity.on("logout", () => console.log("Logged out"));
+            netlifyIdentity.on("error", err => console.error("Logged out"));
+            netlifyIdentity.on("open", () => console.log("Widget opened"));
+            netlifyIdentity.on("close", () => console.log("Widget closed"));
+        </script>
+ -    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+        })
+    </script>
+</body>
+
+</html>
