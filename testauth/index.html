@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script defer type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
@@ -87,12 +87,14 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  -    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <script>// Bind to events
+        if (window.netlifyIdentity){
             netlifyIdentity.on("init", user => console.log(user));
             netlifyIdentity.on("login", user => console.log(user));
             netlifyIdentity.on("logout", () => console.log("Logged out"));
             netlifyIdentity.on("error", err => console.error("Logged out"));
             netlifyIdentity.on("open", () => console.log("Widget opened"));
             netlifyIdentity.on("close", () => console.log("Widget closed"));
+        }
         </script>
  -    <script type="text/javascript">
         $(document).ready(function () {
