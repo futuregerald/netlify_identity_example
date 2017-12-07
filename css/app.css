@@ -4,7 +4,7 @@ body {
 }
 
 span strong {
-  color: #FF7808;
+  color: #42a4bd;
 }
 .navDiv {
   height: 30em !important;
@@ -24,13 +24,13 @@ span strong {
 }
 
 .bannerText1 {
-  color: #E3F2FD;
+  color: #42a4bd;
   font-family: 'Roboto', sans-serif !important;
   text-align: center;
   line-height: 5em;
 }
 .bannerText1strong{
-  color: #FF7808;
+  color: #E3F2FD;;
 }
 
 .tallerCards {
