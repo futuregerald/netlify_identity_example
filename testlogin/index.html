@@ -78,10 +78,12 @@
                 <div class="col s12">
                 <div class="card-panel grey lighten-5 black-text ">
                     <span>
+                        <p id="primary-text">
                         You would have been redirected to the login/logout page automatically if you went to /testauth without being logged in to identity.
                         You can also go to this page by clicking on the "Login" link at the top of the page. If you want to login, click the button below.
+                        </p>
                         <p>Test username and password:  <strong>u:</strong>test@netlify.com <strong>p:</strong>testing</p>
-                        <br /><br /><button class="btn waves-effect waves-light black" type="submit" name="action" data-netlify-identity-button><i class="material-icons right"></i></button>
+                        <button class="btn waves-effect waves-light black" type="submit" name="action" data-netlify-identity-button><i class="material-icons right"></i></button>
                     </span>
                 </div>
                 </div>
@@ -110,7 +112,7 @@
                 window.netlifyIdentity.on("init", user => {
                 if (!user) {
                     window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/";
+                        document.getElementById("primary-text").innerHTML="Looks like you've logged in successfully! Now try clicking the 'Test Auth' link at the top!"
                     });
                 }
             });   
