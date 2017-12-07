@@ -75,13 +75,30 @@
                 <div class="col s12">
                 <div class="card-panel grey lighten-5 black-text ">
                     <span>
-                        Welcome to my Netlify Identity sample site. There are three available routes in addition to this home page:
+                        Welcome to my Netlify Identity sample site. There is a user account setup that you can use to gain access to the "Test Auth" page, and CMS. 
+                        If you aren't logged in then when you visit /testauth you'll be redirected to Login, and the CMS will also prompt you to login. Logging in to Identity will give you access to both routesThere are three available routes in addition to this home page:
                         <ul>
                             <li>
                                 <strong>Test Auth:</strong> This route is blocked by Netlify JWT auth, you can only enter if you have a JWT with 'admin' role.
-                                <strong>Login:</strong> This page has a 'Login' button. You can login using u:test@netlify.com <strong>p:</strong>  
+                            </li>
+                            <li>
+                                <strong>Login:</strong> This page has a 'Login' button. You can login using <strong>u:</strong>test@netlify.com <strong>p:</strong>testing <br />
+                            </li>
+                            <li>    
+                                <strong>NetlifyCMS</strong> This link goes to /admin/ where the Neltify CMS is currently setup. Logging in will give you access to the CMS, 
+                                    but other than that the CMS is not setup for anything since this site is not generated from markdown, and was not made using a static site generator. <br />
                             </li>
                         </ul>
+                        <p> The Netlify <code>_redirects</code> file that I'm using on this site contains: </p>
+                        <code>
+                                /testauth/* 200! Role=admin <br />
+                                /testauth/ /testlogin 302
+                        </code>
+                        <p>There's some Javascript on the /testlogin page that checks to see if the JWT has expired, and if so it logs you out of Identity,
+                            and prompts you to login back in. This is not done by default with Identity right now. Identity sessions last longer than JWT sessions.
+                        </p>
+                        <p>You can find all of the code for this site in the public repo at <a target="_blank" href="https://github.com/futuregerald/netlify_identity_example">
+                            https://github.com/futuregerald/netlify_identity_example</a> </p>
                         
                     </span>
                 </div>

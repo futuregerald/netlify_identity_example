@@ -87,6 +87,36 @@
             </div>
            
     </div>
+    <script>
+    // This function does the date comparison and logs the user out if necessary, also updates the text.
+            const compareDate = (exp) => {
+                const d = Date.now()
+                if (d > exp){
+                console.log("Your identity session has expired")
+                document.getElementById("error-text").innerHTML= "Right now sessions are good for an hour, and yours has expired ¯\_(ツ)_/¯. Please login again"
+                netlifyIdentity.logout();
+                netlifyIdentity.open();
+                } else {
+                console.log("the token hasn't expired, yet")
+                }
+            }
+            if (window.netlifyIdentity) {
+    // Check if the JWT token is expired, if so log out the user          
+                netlifyIdentity.on("login", user => {
+                console.log(user)
+                compareDate(user.token.expires_at)}
+                );
+    // Redirect to the main page after a successful login
+                window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/";
+                    });
+                }
+            });   
+            }
+            
+    </script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script type="text/javascript">
