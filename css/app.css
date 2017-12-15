@@ -3,6 +3,10 @@ body {
   background-color: #5E95D2;
 }
 
+span {
+  line-height: 2em;
+}
+
 span strong {
   color: #42a4bd;
 }
