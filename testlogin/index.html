@@ -68,23 +68,25 @@
             <h1 class='bannerText1'> Netlify
                 <strong onClick={this.handleLogIn} class="bannerText1strong">IDENTITY</strong>
             </h1>
-            <h4></h4>
 
         </div>
-        <br></br>
         
         <div class="container shiftUp">
             <div class="row">
                 <div class="col s12">
                 <div class="card-panel grey lighten-5 black-text ">
-                    <span>
+                    <main>
                         <p id="primary-text">
-                        You would have been redirected to the login/logout page automatically if you went to /testauth without being logged in to identity.
-                        You can also go to this page by clicking on the "Login" link at the top of the page. If you want to login, click the button below.
+                        You would have been redirected here automatically if you went to the <a href="/testauth">Test Auth</a> page without being logged in.
+                        You can also go to this page by clicking on the 'Login' link at the top of the page. If you want to log in, click the button below.
                         </p>
-                        <p>Test username and password:  <strong>u:</strong>test@netlify.com <strong>p:</strong>testing</p>
+                        <p>You can log in with these credentials:</p>
+                        <blockquote>
+                            <strong>username:</strong> test@netlify.com <br />  
+                            <strong>password:</strong> testing
+                        </blockquote>
                         <button class="btn waves-effect waves-light black" type="submit" name="action" data-netlify-identity-button><i class="material-icons right"></i></button>
-                    </span>
+                    </main>
                 </div>
                 </div>
             </div>
@@ -93,7 +95,7 @@
     <script>
     // This function does the date comparison and logs the user out if necessary, also updates the text.
             const updateLoginText = ()=>{
-                document.getElementById("primary-text").innerHTML="Looks like you've logged in successfully! Now try clicking the 'Test Auth' link at the top!"
+                document.getElementById("primary-text").textContent="Looks like you've logged in successfully! Now try clicking the 'Test Auth' link at the top!"
             }
             const compareDate = (exp) => {
                 const d = Date.now()

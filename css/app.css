@@ -1,15 +1,12 @@
 body {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Roboto', sans-serif;
   background-color: #5E95D2;
 }
 
-span {
-  line-height: 20px;
-}
-
-span strong {
+main strong {
   color: #42a4bd;
 }
+
 .navDiv {
   height: 30em !important;
   background-image: url('../img/banner.png');
@@ -29,7 +26,7 @@ span strong {
 
 .bannerText1 {
   color: #42a4bd;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   line-height: 5em;
 }
@@ -49,7 +46,7 @@ span strong {
 
 .shiftUp {
   position: relative;
-  top: -7em !important;
+  top: -4em;
 }
 
 .whiteBackground {
